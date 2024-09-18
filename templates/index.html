@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vision AI App</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <style>
+        body {
+            padding-top: 20px;
+        }
+        .tab-content {
+            border: 1px solid #dee2e6;
+            border-top: none;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="mb-4">Vision AI App</h1>
+        
+        <ul class="nav nav-tabs" id="myTab" role="tablist">
+            <li class="nav-item" role="presentation">
+                <button class="nav-link active" id="ocr-tab" data-bs-toggle="tab" data-bs-target="#OCR" type="button" role="tab" aria-controls="OCR" aria-selected="true">OCR</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="image-recognition-tab" data-bs-toggle="tab" data-bs-target="#ImageRecognition" type="button" role="tab" aria-controls="ImageRecognition" aria-selected="false">Image Recognition</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="face-detection-tab" data-bs-toggle="tab" data-bs-target="#FaceDetection" type="button" role="tab" aria-controls="FaceDetection" aria-selected="false">Face Detection</button>
+            </li>
+        </ul>
+        <div class="tab-content" id="myTabContent">
+            <div class="tab-pane fade show active" id="OCR" role="tabpanel" aria-labelledby="ocr-tab">
+                <iframe src="/ocr" width="100%" height="600px" frameborder="0"></iframe>
+            </div>
+            <div class="tab-pane fade" id="ImageRecognition" role="tabpanel" aria-labelledby="image-recognition-tab">
+                <iframe src="/image_recognition" width="100%" height="600px" frameborder="0"></iframe>
+            </div>
+            <div class="tab-pane fade" id="FaceDetection" role="tabpanel" aria-labelledby="face-detection-tab">
+                <iframe src="/face_detection" width="100%" height="600px" frameborder="0"></iframe>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
